@@ -1,6 +1,13 @@
 #include <iostream>
 #include <windows.h>
 
+/*
+* Program represents a simple client which uses a named
+* pipe created by server process. This app should be
+* started after server, and it should process input and
+* send it to the server through the pipe.
+*/
+
 #define PIPE(name) TEXT("\\\\.\\pipe\\"##name)
 
 typedef unsigned long int uint32;

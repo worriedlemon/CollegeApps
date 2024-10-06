@@ -2,6 +2,11 @@
 #include <stdexcept>
 #include <conio.h>
 
+/*
+* Program for generating exception which causes OS
+* (Windows system) to create a dump in event journal
+*/
+
 int main()
 {
 	std::cout << "Press any key to generate exception...\n";

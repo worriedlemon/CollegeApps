@@ -1,6 +1,12 @@
 #include <iostream>
 #include <windows.h>
 
+/*
+* Program represents a simple server which creates a named
+* pipe with name `my_pipe`. This server just prints a message
+* which was transfered into the pipe by a client process.
+*/
+
 #define PIPE(name) TEXT("\\\\.\\pipe\\"##name)
 
 typedef unsigned long int uint32;

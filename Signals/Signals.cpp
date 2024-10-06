@@ -1,6 +1,19 @@
 #include <iostream>
 #include <signal.h>
 
+/*
+* One of the simpler IPC methods is to use signals. Processes
+* can pass signals between each other. There are many types of
+* signals in UNIX, although there are no signals in Windows,
+* except for SIGINT, SIGTERM, SIGALRM, SIGABRT and some others.
+* 
+* This simple app redefines behavior of the signal SIGINT,
+* which is passed when process get Ctrl+C input to interrupt
+* its execution.
+* 
+* This app is written for Windows operating system
+*/
+
 // Creating custom SIGINT signal handler
 void signal_handler(int signal)
 {

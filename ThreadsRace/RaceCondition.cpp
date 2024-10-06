@@ -1,6 +1,11 @@
 #include <iostream>
 #include <thread>
 
+/*
+* Program which demonstrates race condition of two threads
+* executing same function with different argument
+*/
+
 // Procedure which is executed in other threads (shared 'cout' variable)
 void foo(int index)
 {
