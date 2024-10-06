@@ -15,6 +15,9 @@ int main()
 		auto _ = _getch();
 	}
 	std::cerr << "Generating exception..." << std::endl;
+
+	// Starting event viewer to catch a dump
+	system("eventvwr");
 	
 	// Not catching on purpose, so Windows event viewer can make error dump
 	throw std::logic_error("Something went wrong!");
