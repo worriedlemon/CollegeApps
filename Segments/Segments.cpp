@@ -12,7 +12,7 @@ constexpr unsigned cut20bits(unsigned int F)
 int main()
 {
     // Random address
-    constexpr int a = cut20bits(0xFFFA516);
+    constexpr int a = cut20bits(0x1FA0DBC);
 
     // Counter
     int cnt = 0;
