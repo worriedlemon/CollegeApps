@@ -2,8 +2,12 @@
 
 typedef double(__cdecl* sqrtfunc_ptr)(double);
 
-#if defined(_runtime) and _runtime
+#ifndef _runtime
+#error _runtime should be defined as a number to use this code
 
+#else
+
+#if _runtime
 #include <windows.h>
 
 sqrtfunc_ptr loadlib(const char* name)
@@ -18,4 +22,6 @@ sqrtfunc_ptr loadlib(const char* name)
 }
 #else
 extern "C" double __cdecl my_sqrt(double);
-#endif
+#endif // if _runtime
+
+#endif // ifdef _runtime
