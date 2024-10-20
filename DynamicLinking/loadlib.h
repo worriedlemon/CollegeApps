@@ -20,6 +20,13 @@ sqrtfunc_ptr loadlib(const char* name)
 
 	return result;
 }
+
+bool freelib(const char* name)
+{
+	HINSTANCE hinstlib = GetModuleHandleA(name);
+
+	return FreeLibrary(hinstlib);
+}
 #else
 extern "C" double __cdecl my_sqrt(double);
 #endif // if _runtime

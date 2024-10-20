@@ -63,5 +63,13 @@ int main()
 
 	std::cout << std::endl;
 
+#if _runtime
+	if (!freelib(module_name))
+	{
+		std::cout << "Error unloading library" << module_name << std::endl;
+		return -1;
+	}
+#endif
+
 	return 0;
 }
